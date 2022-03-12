@@ -6,10 +6,10 @@ function Clock() {
   useEffect(
     function () {
       setTimeout(function () {
-        setTime(time + 1);
-      }, 1000);
+        setTime(time + 1); // Update the time variable
+      }, 1000); // Wait a second and call the callback
     },
-    [time]
+    [time] // Anytime time changes, call the callback function
   );
 
   return (

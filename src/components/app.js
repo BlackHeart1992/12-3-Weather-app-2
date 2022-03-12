@@ -1,27 +1,35 @@
-const { BrowserRouter, Switch } = require("react-router-dom");
-// Always import packages at the top and requires beneath
+const { BrowserRouter, Switch, Route } = require("react-router-dom");
 const Nav = require("./nav");
 const Game = require("./game");
 const Clock = require("./clock");
 const SignUp = require("./signup");
 const Home = require("./home");
 const About = require("./about");
+const Contact = require("./contact");
+const Hello = require("./hello");
+const Calculator = require("./calculator");
 
 function App() {
   let pageTitle = "Our React Weather App";
   return (
     <BrowserRouter>
       <Nav title={pageTitle} />
+      <Clock />
       <Switch>
-        <Home />
-        <About />
-        <SignUp />
-        <Clock />
-        <Game />
+        <Route exact={true} path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/hello/:name" children={<Hello />} />
+        <Route path="/add/:x/:y" children={<Calculator />} />
       </Switch>
     </BrowserRouter>
   );
 }
-// Render all the components within the function
-// Anything inside the switch will be conditionally be shown
+
 module.exports = App;

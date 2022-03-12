@@ -22099,14 +22099,16 @@ $parcel$ReactRefreshHelpers$d2b6.prelude(module);
 
 try {
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const { BrowserRouter , Switch  } = require("react-router-dom");
-// Always import packages at the top and requires beneath
+const { BrowserRouter , Switch , Route  } = require("react-router-dom");
 const Nav = require("./nav");
 const Game = require("./game");
 const Clock = require("./clock");
 const SignUp = require("./signup");
 const Home = require("./home");
 const About = require("./about");
+const Contact = require("./contact");
+const Hello = require("./hello");
+const Calculator = require("./calculator");
 function App() {
     let pageTitle = "Our React Weather App";
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(BrowserRouter, {
@@ -22115,57 +22117,89 @@ function App() {
                 title: pageTitle
             }, void 0, false, {
                 fileName: "src/components/app.js",
-                lineNumber: 14,
+                lineNumber: 16,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Clock, {
+            }, void 0, false, {
+                fileName: "src/components/app.js",
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Switch, {
                 children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
-                    }, void 0, false, {
-                        fileName: "src/components/app.js",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(About, {
-                    }, void 0, false, {
-                        fileName: "src/components/app.js",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(SignUp, {
-                    }, void 0, false, {
-                        fileName: "src/components/app.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Clock, {
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        exact: true,
+                        path: "/",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
+                        }, void 0, false, {
+                            fileName: "src/components/app.js",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/components/app.js",
                         lineNumber: 19,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Game, {
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        path: "/about",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(About, {
+                        }, void 0, false, {
+                            fileName: "src/components/app.js",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/components/app.js",
-                        lineNumber: 20,
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        path: "/contact",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Contact, {
+                        }, void 0, false, {
+                            fileName: "src/components/app.js",
+                            lineNumber: 26,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/app.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        path: "/hello/:name",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Hello, {
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/components/app.js",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Route, {
+                        path: "/add/:x/:y",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Calculator, {
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/components/app.js",
+                        lineNumber: 29,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/app.js",
-                lineNumber: 15,
+                lineNumber: 18,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/app.js",
-        lineNumber: 13,
+        lineNumber: 15,
         columnNumber: 5
     }, this));
 }
 _c = App;
-// Render all the components within the function
-// Anything inside the switch will be conditionally be shown
 module.exports = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -22175,7 +22209,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./nav":"kefMG","./game":"3tK5j","./clock":"grdRA","./signup":"jPaTy","./home":"l90Qn","./about":"adsiP","react-router-dom":"fdOAw"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./nav":"kefMG","./game":"3tK5j","./clock":"grdRA","./signup":"jPaTy","./home":"l90Qn","./about":"adsiP","react-router-dom":"fdOAw","./contact":"kLvWg","./hello":"iZ9do","./calculator":"kF36t"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -22990,15 +23024,73 @@ function Nav({ title  }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("nav", {
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
-                    to: "/",
-                    children: "Home"
-                }, void 0, false, {
-                    fileName: "src/components/nav.js",
-                    lineNumber: 8,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/",
+                        children: "Home"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 8,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/about",
+                        children: "About"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 9,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/contact",
+                        children: "Contact"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/hello/shafiq",
+                        children: "Hello Shafiq"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/hello/nadiah",
+                        children: "Hello Nadiah"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/hello/nurain",
+                        children: "Hello Nurain"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/hello/wong",
+                        children: "Hello Wong"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Link, {
+                        to: "/add/5/7",
+                        children: "5 + 7"
+                    }, void 0, false, {
+                        fileName: "src/components/nav.js",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/nav.js",
                 lineNumber: 7,
                 columnNumber: 7
@@ -24962,11 +25054,12 @@ function Clock() {
     const [time, setTime] = useState(0);
     useEffect(function() {
         setTimeout(function() {
-            setTime(time + 1);
-        }, 1000);
+            setTime(time + 1); // Update the time variable
+        }, 1000); // Wait a second and call the callback
     }, [
         time
-    ]);
+    ] // Anytime time changes, call the callback function
+    );
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
             children: [
@@ -25009,19 +25102,22 @@ const { useState , useEffect  } = require("react");
 function SignUp() {
     _s();
     const [email, setEmail] = useState("");
-    const [error, setError] = useState(true); // true -assuming the email is invalid
-    let borderColor = "green";
-    if (error) borderColor = "red";
+    const [error, setError] = useState(true); // They haven't typed yet
+    let borderColor = "green"; // By default, we show a green border
+    if (error) // If there is an error
+    borderColor = "red"; // Make the border red
     function handleChange(event) {
-        setEmail(event.target.value);
+        setEmail(event.target.value); // Updates the state, and re-renders the component
     }
+    // Let's add some validations!
     useEffect(function() {
         let isEmailValid = email.includes("@");
         setError(!isEmailValid);
-    //   If the email is invalid, the error should be true
+    // If it's an invalid email, error should be true
     }, [
         email
-    ]);
+    ] // If email changes, run the callback function
+    );
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
@@ -25034,7 +25130,7 @@ function SignUp() {
                 }
             }, void 0, false, {
                 fileName: "src/components/signup.js",
-                lineNumber: 27,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
@@ -25042,19 +25138,29 @@ function SignUp() {
                 value: "Sign Up"
             }, void 0, false, {
                 fileName: "src/components/signup.js",
-                lineNumber: 36,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/signup.js",
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 5
     }, this));
 }
 _s(SignUp, "M4gtQV5WdYCzFbi9vB0vOiDSk0U=");
 _c = SignUp;
-module.exports = SignUp;
+module.exports = SignUp; // useEffect can receives two parameters
+ //  - a callback
+ //  - optionally, a dependencies array
+ // useEffect changes based on the second parameter
+ //  If the second parameter is []
+ //    The callback run once as soon as the component is rendered on the page
+ //  If the second parameter doesn't exist
+ //    The callback will run every time the component re-renders
+ //        (everytime any state changes)
+ //  If the second parameter is an array with items in it
+ //    The callback will run any time any of those items change
 var _c;
 $RefreshReg$(_c, "SignUp");
 
@@ -25129,6 +25235,132 @@ $RefreshReg$(_c, "About");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequirebbde")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kLvWg":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c69a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c69a.prelude(module);
+
+try {
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Contact() {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+            children: "Contact"
+        }, void 0, false, {
+            fileName: "src/components/contact.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/contact.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this));
+}
+_c = Contact;
+module.exports = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$c69a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iZ9do":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5f00 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5f00.prelude(module);
+
+try {
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _s = $RefreshSig$();
+const { useParams  } = require("react-router-dom");
+function Hello() {
+    _s();
+    let params = useParams();
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+            children: [
+                "Hello ",
+                params.name.toUpperCase()
+            ]
+        }, void 0, true, {
+            fileName: "src/components/hello.js",
+            lineNumber: 7,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/hello.js",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this));
+}
+_s(Hello, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
+    return [
+        useParams
+    ];
+});
+_c = Hello;
+module.exports = Hello;
+var _c;
+$RefreshReg$(_c, "Hello");
+
+  $parcel$ReactRefreshHelpers$5f00.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kF36t":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c1dd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c1dd.prelude(module);
+
+try {
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _s = $RefreshSig$();
+const { useParams  } = require("react-router-dom");
+function Calculator() {
+    _s();
+    const { x , y  } = useParams();
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+            children: [
+                x,
+                " + ",
+                y,
+                " = ",
+                parseInt(x) + parseInt(y)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/calculator.js",
+            lineNumber: 7,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/calculator.js",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this));
+}
+_s(Calculator, "/kMyx8TzEbDpj2X2VHff4dEZb44=", false, function() {
+    return [
+        useParams
+    ];
+});
+_c = Calculator;
+module.exports = Calculator;
+var _c;
+$RefreshReg$(_c, "Calculator");
+
+  $parcel$ReactRefreshHelpers$c1dd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequirebbde")
 
 //# sourceMappingURL=index.975ef6c8.js.map
